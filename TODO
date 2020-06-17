@@ -1,0 +1,95 @@
+Visuels: ROUGE BLEU VERT GRIS NOIR BLANC
+
+Partie 1:
+    Faire les trucs 1 à 7 de la feuille de hélàne
+        -1 présentation/services/cours offerts
+        -2 Photos/videos -> (slideshow prioritaire!)
+        -3 nouvelles/promotions -> nouvelles prioritaire!
+        -4 essai gratuit: téléphone ou courriel uniquement
+        -5 coordonnés (footer)
+        -6 lien fb (footer)
+        -7 horaire tarifs...
+            page horaire avec tarifs en dessous -> dans session week? and rates
+    entraîneurs (optionnel)
+
+BUGS:
+    -générer un rabais pour cartes pour le membre sur abonnement...
+    -prorata pour les abonnement en plein millieux de session...?
+    -faire marcher l'asignation de rabais à un forfait/client? (et achat?)
+        -Lier un discount à un membre? (et faire que le membre puisse l'utiliser dans l'achat de cartes (voir le select pour la vérification des rabais dans l'achat))
+    -Changer comment l'admin est défini: Ce n'est pas un type, mais un bool dans membre.... (Un admin n'est pas nécessairement un entrainteur!?)
+    -VÉRIFIER QUE TOUTES LES PAGES DES MODULES CHECK SI C'EST UN POST REQUEST!
+
+MEMBERS:
+    -Module rabais pour le membre (avec ses rabais disponible (à lui et en général!))
+    -Gestion mot de passe oublié ? (modifier mot de passe au moins)
+    -Faire une page "mes cours" pour afficher juste les cours qu'il est inscrit!
+
+SITE WEB:
+    -mettre un checkbox pour le définir privé ou pas! (Période...?)
+    -Faire une page d'accueil (caroussel photo, contact, infos, horaire?)
+    -Faire un bel espace membre...?
+
+QUESTIONS:
+    -Un administrateur... juste Mme Hélène ou d'autres? Si d'autres, dérange-tu qu'ils peuvent donner des cours? (se retrouvent dans la liste des entraîneurs)
+    -Doit-on savoir qui fait la nouvelle/promotion? (si plus d'un admin dans le site web)
+    -Doit-elle pouvoir décaller séance début/fin si quelqu'un est déjà dedans? -> module notifs!?
+    -Rabais: 18ans et + ou possible de faire entre 10 et 25 ans?
+    -les clients peuvent avoir entre 5 et 90 ans? (C'est quoi le plus fréquent pour la tranche d'âge?)
+
+    -Les séacnes PRIVÉES, les membres ne peuvent s'enregistrer? Si non, pourquoi l'afficher à L'horaire?
+        est-ce pour manuellement inscrire du monde?
+            ######(Si oui, ajouter un bool dans periods pour cours privés!)
+            ######(pour empêcher le monde de s'inscrire et ajouter un champ pour définir couleur privée dans l'activité!)
+
+PAIEMENTS
+    -paypal?
+
+AMÉLIORATIONS?
+    -si je fais la liste d'attente:
+        -quand le meeting est commencé, toute les personnes dans la file d'attente retrouve leur place!
+    -afficher le nombre de séances PASSÉ / prévue et disponibles pour une carte!
+    -faire un module pour logger les actions sur le site web
+        -Dans le module de la DB, logger l'action (add/edit/delete) avec le id du user courant, le OLD et le NEW
+        si possible, le nom de la db ciblé et l'heure de l'action. Le OLD/NEW est encodé en JSON.
+        -Faire un formatter en array ['action']['table'] =  'string' pour bien dire quel action sur quel DB c'est quoi:
+            ['add']['members_meetings'] = "a assigné l'entraîneur ";
+            ...
+    -faire un total de du pour un membre (rapport / compte)?
+    -Faire des model php (DES VRAI OBJECTS!)
+    -écrire le nombre de place maximum dans la liste des cours pour nouvelle période!
+    -page de notifications pour avertir l'utilisateur? (la notif sera ouverte dans un custum truc... et comme ça jva pouvoir cocher "lu" dans la DB) c'est lié avec le log du site web a doit avoir un user target?
+        -Use the label/bubble de BootStrap!
+    -backup de db automatique!
+    -A la place de mettre en rouge l'indication des places en rouge quand c'est full, il devrait être vert???
+    -Faire un module pour les coaches! (visualiser la liste des cours etc)
+    +Faire un modules des cours personnalisé pour le membre (liste des cours... etc)
+        --liste détailler pour chaques cours!? (voir to-do dans members .php)
+    -un selecteur pour rabais lors de l'achat de forfait?
+    -Ajouter pour le TIME picker que si tu clique sur la flèche, que tu focus sur le chiffre lié.
+        -si tab, focus next input in form?
+        -###### farfelu: si écrit, décryt?
+    -Faire un module de suggestion/commentaire? (en lien avec les notifs pour admin?)
+    -NICE TO HAVE:
+        dans le module weeksession, pouvoir ajouter un meeting spécial:
+            c'est un combiné de period-meeting pour me modal
+            (ajouter une colonne dans period qui dit special ou pas)
+            (lier le meeting à cette période)
+            (lier la periode a la session en question)
+
+NOTES:
+    -Rabais: si pas assigné, disponible à tous, si non seulement disponible à assigné...
+    -subscriptions (dans le MCD) permet de trouver qui est abonné à quoi sans faire le tour des meetings
+    -Regarder REPLACE ou UPDATE en SQL?
+    -REGISTRED dans les inscriptionaux meeting permet de savoir s'il s'est désinscrit avant ou apres le cancellation deadline...
+    -Si quelqu'un veut pas avoir son nom affiché, Simplement écrire autre chose
+    -Pour la génération des liste pour le coache:
+        Mettre le nom écrit + l'info du membre qui l'a mis!
+    -pas besoin de unregister un membre sur remboursement... ça se fait automatiquement!
+
+OUTILS
+    CKEDITOR
+
+Apprendre:
+    FreecodeCamp?
+

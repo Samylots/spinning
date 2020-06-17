@@ -1,0 +1,65 @@
+body {
+	font-size: 80%;
+	margin: 0;
+	padding: 0;
+	font-family: tahoma, geneva, sans-serif;
+	background-color:#FFF;
+}
+
+
+.main-content {
+	color: #666666;
+	position: absolute;
+	padding-left:20px;
+	padding-top: 20px;
+	width: 585px;
+	padding-bottom: 20px;
+}
+
+.main-content h1 {
+	color: #5890D1;
+	font-size: 1.9em;
+	font-family: Trebuchet MS;
+	border-bottom: 1px solid #cccccc;
+	margin: 0px 10px 0px 0px;
+}
+
+div.buttonSubmit {
+	position: relative;
+}
+
+div.buttonSubmit input,div.buttonSubmit span {
+	height: 36px;
+	position: relative;
+	background-image: url(images/button-submit.gif);
+	background-repeat: no-repeat;
+	background-position: right 0px;
+	float: left;
+	color: #FFFFFF;
+	font-weight: bold;
+	padding: 0px 15px 2px 15px;
+	margin: 20px 0px 20px 0px;
+	border: 0px;
+	cursor: pointer;
+	z-index: 5;
+}
+
+label.error {
+	display: block;
+	color: red;
+	font-style: italic;
+	font-weight: normal;
+}
+
+input.error {
+	border: 2px solid red;
+}
+
+input {
+	display:inline-block;
+}
+	
+label {	
+	display:inline-block; 
+	width: 200px;
+}

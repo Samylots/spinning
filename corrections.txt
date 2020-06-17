@@ -1,0 +1,3 @@
+période - scéance ? abonnement
+couleur gris foncé et non rouge dans achats
+ajouter session dans rapport
