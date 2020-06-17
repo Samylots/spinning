@@ -16,10 +16,10 @@ We were doing it by teams of 2 students, but my class was odd so I had to do it 
 `$DBUser`
 `$DBPassword`
 3. Deploy the comple website to a running PHP environment (WAMP)
-3.1 (You can also use the script `.\init\ScriptStructureAvecDonnees.sql` to already have some sessions, courses and users)
-4. Open the website link.
+4. (You can also use the script `.\init\ScriptStructureAvecDonnees.sql` to already have some sessions, courses and users)
+5. Open the website link.
 Note: The first access will take a long time to response since it need to create the whole requires database when it's not yet there.
-5. Now you can enjoy the website! (See "Espace membre")
+6. Now you can enjoy the website! (See "Espace membre")
 
 For some obvious reasons, I won't share any credential to an admin account. _Sorry!_
 I'll let you deploy it on your local environment and you will be able to edit the database user's record to make it as an administrator.
